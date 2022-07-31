@@ -1,5 +1,5 @@
-# LeetCode-Daily
-LeetCode Daily Solutions of my attempted Questions will be posted in this repo on regular basis Under a topic folder of the Question.
+# Data-Structures Practice Problems
+Data Structure Problems that I solve will be uploaded in this repo.
 
 First to give it a try for a while and then only refer to solution.
 You can follow 20-40-60 rule before refering to solutions:
