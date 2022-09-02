@@ -1,4 +1,5 @@
 // Problem Link: https://practice.geeksforgeeks.org/problems/dice-throw5349/1
+// LeetCode: 1155
 
 class Solution {
     static long noOfWays(int m, int n, int x) {
@@ -109,6 +110,33 @@ class Solution {
                         ans += prev[x-face];
                 }
                 cur[x] = ans;
+           }
+           prev = cur.clone();
+        }
+        
+        return prev[target];
+    }
+    
+    //LeetCode Accepted
+    int solveSO(int dices, int faces, int target){
+        
+        int[] prev = new int[target+1];  // dp[dice-1]
+        int[] cur = new int[target+1];   // dp[dice]
+        
+        //after analysing base case
+        prev[0] = 1;
+        
+        int ans;
+        for(int dice = 1; dice<=dices; dice++){
+           
+           for(int x = 1; x <= target; x++){
+            
+                ans = 0;
+                for(int face = 1; face <= faces; face++){
+                    if(x-face >= 0)
+                        ans = ans%mod + prev[x-face] % mod;
+                }
+                cur[x] = ans % mod;
            }
            prev = cur.clone();
         }
