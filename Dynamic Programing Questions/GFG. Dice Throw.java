@@ -89,7 +89,7 @@ class Solution {
         return dp[dices][target];
     }
     
-    //giving wrong answer
+    //Space Optimised Approach
     static long solveSO(int dices, int faces, int target){
         
         long[] prev = new long[target+1];  // dp[dice-1]
