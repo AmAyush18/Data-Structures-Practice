@@ -1,7 +1,7 @@
 # Data-Structures Practice Problems
 Data Structure Problems that I solve will be uploaded in this repo.
 
-First to give it a try for a while and then only refer to solution.
+First give it a try for a while and then only refer to solution.
 You can follow 20-40-60 rule before refering to solutions:
 20 mins to easy qsn.
 40 mins to medium qsn.
