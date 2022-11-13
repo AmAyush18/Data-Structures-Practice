@@ -16,11 +16,12 @@ class Solution
         
         // return recursive(n-1, m-1, mx);
         
-        int[][] dp = new int[n][m];
+//         int[][] dp = new int[n][m];
         // return recMem(n-1, m-1, mx, dp)%mod;
         
-        return tabulation(n, m, mx);
+//         return tabulation(n, m, mx);
         
+        return spaceOptim(n, m, mx);        
     }
     
     // Recursive 
@@ -92,4 +93,32 @@ class Solution
         
         return dp[m-1][n-1] % mod;
     }    
+    
+    // Space Optimisation
+    int spaceOptim(int m, int n, int[][] mx){
+        
+        int[] prev = new int[n];
+        
+        for(int i = 0; i < m; i++){
+            int[] curr = new int[n];
+            
+            for(int j = 0; j < n; j++){
+                if(i == 0 && j == 0) curr[j] = 1;
+                else{
+                    if(mx[i][j] != -1){
+                        int up = 0, left = 0;
+                        if(i > 0) up = prev[j] % mod;
+                        if(j > 0) left = curr[j-1] % mod;
+                        
+                        curr[j] = (up + left) % mod;
+                    }else{
+                        curr[j] = 0;
+                    }
+                }
+            }
+            prev = curr.clone();
+        }
+        
+        return prev[n-1];
+    }
 }
