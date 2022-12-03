@@ -1,4 +1,5 @@
 // LeetCode Problem Link: https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
+// GFG Problem Link: https://practice.geeksforgeeks.org/problems/find-a-pair-with-given-target-in-bst/1
 
 // Implementing a single Iterator Class so that we can reuse it for both next and befor
 // Recommended for Interview
