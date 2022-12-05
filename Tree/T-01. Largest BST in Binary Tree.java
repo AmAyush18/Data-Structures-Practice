@@ -1,5 +1,5 @@
 // GFG Qsn Link:- https://practice.geeksforgeeks.org/problems/largest-bst/1
-
+  
 // Helper Data Structure to keep track of smallest node, largest node and current largest BST
 class NodeValue{
         public int minNode, maxNode, maxSize;
