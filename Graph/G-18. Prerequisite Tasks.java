@@ -28,11 +28,13 @@ class Solution {
             if(indeg[i] == 0) q.add(i);
         }
         
-        List<Integer> topo = new ArrayList<>();
+//         List<Integer> topo = new ArrayList<>();  we don't need to store topo sort list instead we can just count number of tasks being completed
+        int i = 0;
         
         while(!q.isEmpty()){
             Integer node = q.poll();
-            topo.add(node);
+//             topo.add(node);
+            i++;
             
             for(Integer it : adj.get(node)){
                 indeg[it]--;
@@ -40,7 +42,8 @@ class Solution {
             }
         }
         
-        return topo.size() == N;
+//         return topo.size() == N;
+        return i == N;
     }
     
 }
