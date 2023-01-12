@@ -27,6 +27,9 @@ class Solution {
         Arrays.fill(dist, (int)(1e9));
         dist[0] = 0;  // bcoz 0 is our src and src to src is 0 distance
         
+	// T.C: O(N + M)
+	// we do it this way to make sure that before going to any node
+	// we have computed the answer for the node that could lead to this node
         while(!st.isEmpty()){
             int node = st.pop();
             
@@ -48,7 +51,8 @@ class Solution {
         
         return dist;
 	}
-	
+	// Intution for doing topoSort is to find the order of reachibility
+	// T.C: O(N)
 	private void topoSort(int node, boolean[] vis, Stack<Integer> st){
 	    vis[node] = true;
 	    
