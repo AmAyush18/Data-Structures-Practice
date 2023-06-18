@@ -15,8 +15,9 @@ class Solution{
             ans.add(sum);
             return;
         }
-        
+        // Pick the element
         subsets(ind+1, sum+arr.get(ind), arr);
+        // Not Pick the element
         subsets(ind+1, sum, arr);
     }
 }
